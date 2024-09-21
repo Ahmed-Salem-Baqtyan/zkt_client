@@ -23,6 +23,7 @@ module ZktClient
       def validate_create_params!(params)
         super(params)
         validate!(params, :app_status, in: [1, 0, 'Enable', 'Disable'])
+        validate!(params, :area, type: Array)
       end
 
       # Validates the parameters for updating an Employee resource

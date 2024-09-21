@@ -60,8 +60,10 @@ module ZktClient
     # @raise [ArgumentError] if the attribute is not of the expected type
     # @return [void]
     def validate_type!(params, attribute, options)
-      unless params[attribute].is_a?(options[:type])
-        raise(ArgumentError, "#{attribute} must be #{options[:type]}")
+      klass_type = options[:type]
+
+      if klass_type.to_s.present? && !params[attribute].is_a?(klass_type)
+        raise(ArgumentError, "#{attribute} must be #{klass_type}")
       end
     end
 
@@ -74,7 +76,7 @@ module ZktClient
     # @raise [ArgumentError] if the attribute's value is not within the allowed values
     # @return [void]
     def validate_value!(params, attribute, options)
-      if options[:in]&.exclude?(params[attribute])
+      if params[attribute].to_s.present? && options[:in]&.exclude?(params[attribute])
         raise(ArgumentError, "#{attribute} must be in #{options[:in]}")
       end
     end

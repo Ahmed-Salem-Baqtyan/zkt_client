@@ -9,6 +9,6 @@ module ZktClient
     URLS = { base: "/personnel/api/areas/" }.freeze
 
     # Required fields for creating or updating an Area resource
-    REQUIRED_FEILDS = %i[emp_code department area].freeze
+    REQUIRED_FEILDS = %i[area_code area_name].freeze
   end
 end

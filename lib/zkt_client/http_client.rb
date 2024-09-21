@@ -91,6 +91,7 @@ module ZktClient
       # @raise [ZktClient::RequestFailedError] for other response statuses
       def validate_status!(request)
         response = request.body
+
         case request.status
         when 404
           raise(ZktClient::RecordNotFound, response)

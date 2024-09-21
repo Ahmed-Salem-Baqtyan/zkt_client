@@ -12,11 +12,11 @@ module ZktClient
     # @param params [Hash] the parameters to validate
     # @raise [ArgumentError] if required fields are missing or blank
     def validate_create_params!(params)
-      REQUIRED_FEILDS.each do |field|
+      self::REQUIRED_FEILDS.each do |field|
         validate!(params, field, required: true, blank: false)
       end
 
-      params.except(*REQUIRED_FEILDS).each do |field|
+      params.except(*self::REQUIRED_FEILDS).each_key do |field|
         validate!(params, field.to_sym, blank: false)
       end
     end
@@ -26,7 +26,7 @@ module ZktClient
     # @param params [Hash] the parameters to validate
     # @raise [ArgumentError] if any fields are blank
     def validate_update_params!(params)
-      params.each do |field|
+      params.each_key do |field|
         validate!(params, field.to_sym, blank: false)
       end
     end
@@ -36,11 +36,21 @@ module ZktClient
     # @param response [Hash] the response from the server
     # @return [Array<OpenStruct>, Hash] the processed response
     def build_response(response)
-      if ZktClient.with_object_response?
-        (response['data'] || [response]).map { |hash| OpenStruct.new(hash) }
+      return response unless ZktClient.with_object_response?
+
+      if response['data'].is_a?(Array)
+        response['data'].map { |hash| init_object(hash) }
       else
-        response
+        init_object(response)
       end
+    end
+
+    # Initializes an OpenStruct object from a hash
+    #
+    # @param hash [Hash] the hash to convert to an OpenStruct object
+    # @return [OpenStruct] the initialized OpenStruct object
+    def init_object(hash)
+      OpenStruct.new(hash)
     end
 
     # Retrieves the access token for the API
