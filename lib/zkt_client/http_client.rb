@@ -3,47 +3,58 @@
 require "faraday"
 
 module ZktClient
+  # HttpClient class handles HTTP requests for ZktClient
   class HttpClient
     class << self
+      # Makes a GET HTTP request
       #
-      # make GET HTTP request
-      # params uri [String]
-      # params query_params [Hash]
+      # @param url [String] the URL to send the request to
+      # @param headers [Hash] the headers to include in the request
+      # @param params [Hash] the query parameters to include in the request
+      # @return [Hash] the response body
       def get(url:, headers:, params: {})
         do_request(:get, url, params: params, headers: headers)
       end
 
+      # Makes a POST HTTP request
       #
-      # make POST HTTP request
-      # params uri [String]
-      # params body [Hash]
+      # @param url [String] the URL to send the request to
+      # @param params [Hash] the body of the request
+      # @param headers [Hash] the headers to include in the request
+      # @return [Hash] the response body
       def post(url:, params:, headers: {})
         do_request(:post, url, body: params, headers: headers)
       end
 
+      # Makes a PUT HTTP request
       #
-      # make PUT HTTP request
-      # params uri [String]
-      # params body [Hash]
+      # @param url [String] the URL to send the request to
+      # @param params [Hash] the body of the request
+      # @param headers [Hash] the headers to include in the request
+      # @return [Hash] the response body
       def put(url:, params:, headers:)
         do_request(:put, url, body: params, headers: headers)
       end
 
+      # Makes a DELETE HTTP request
       #
-      # make PUT HTTP request
-      # params uri [String]
+      # @param url [String] the URL to send the request to
+      # @param headers [Hash] the headers to include in the request
+      # @return [Hash] the response body
       def delete(url:, headers:)
         do_request(:delete, url, headers: headers)
       end
 
       private
 
+      # Makes an HTTP request
       #
-      # make HTTP request
-      # params method [Symbol]
-      # params uri [String]
-      # params query_params [Hash]
-      # params body [Hash]
+      # @param method [Symbol] the HTTP method to use (:get, :post, :put, :delete)
+      # @param url [String] the URL to send the request to
+      # @param params [Hash] the query parameters to include in the request
+      # @param body [Hash] the body of the request
+      # @param headers [Hash] the headers to include in the request
+      # @return [Hash] the response body
       def do_request(method, url, params: {}, body: {}, headers: {})
         uri = ZktClient.host + url
 
@@ -58,6 +69,9 @@ module ZktClient
         request.body
       end
 
+      # Establishes a Faraday connection
+      #
+      # @return [Faraday::Connection] the Faraday connection
       def connection
         Faraday.new do |conn|
           conn.request :url_encoded
@@ -67,9 +81,16 @@ module ZktClient
         end
       end
 
+      # Validates the status of the HTTP response
+      #
+      # @param request [Faraday::Response] the HTTP response
+      # @raise [ZktClient::RecordNotFound] if the response status is 404
+      # @raise [ZktClient::BadRequestError] if the response status is 400
+      # @raise [ZktClient::UnprocessableEntityError] if the response status is 422
+      # @raise [ZktClient::ServerError] if the response status is 500-599
+      # @raise [ZktClient::RequestFailedError] for other response statuses
       def validate_status!(request)
         response = request.body
-debugger
         case request.status
         when 404
           raise(ZktClient::RecordNotFound, response)

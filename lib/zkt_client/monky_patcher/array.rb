@@ -2,7 +2,14 @@
 
 require_relative "base"
 
-class Array include Base
+# Extends the Array class with additional methods
+class Array
+  include Base
+
+  # Wraps the given object in an array.
+  #
+  # @param object [Object] the object to wrap
+  # @return [Array] the wrapped object as an array
   def self.wrap(object)
     if object.respond_to?(:to_a)
       object.to_a
@@ -11,6 +18,10 @@ class Array include Base
     end
   end
 
+  # Checks if the array excludes the given value.
+  #
+  # @param value [Object] the value to check
+  # @return [Boolean] true if the array does not include the value, false otherwise
   def exclude?(value)
     !self.include?(value)
   end

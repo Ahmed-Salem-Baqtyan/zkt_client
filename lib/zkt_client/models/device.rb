@@ -3,10 +3,12 @@
 require_relative "base"
 
 module ZktClient
-  class Device < Base
-    URLS = {
-      base: "/iclock/api/terminals/"
-    }.freeze
-    REQUIRED_FEILDS = %i[sn alias ip_address].freeze
+  # Department class handles operations related to departments in the ZktClient
+  class Department < Base
+    # URL endpoints for the Department resource
+    URLS = { base: "/personnel/api/departments/" }.freeze
+
+    # Required fields for creating or updating a Department resource
+    REQUIRED_FEILDS = %i[emp_code department area].freeze
   end
 end
