@@ -7,7 +7,7 @@ module ZktClient
   class Employee < Base
     # URL endpoints for the Employee resource
     URLS = {
-      base: '/personnel/api/employees/'
+      base: "/personnel/api/employees/"
     }.freeze
 
     # Required fields for creating or updating an Employee resource
@@ -22,7 +22,7 @@ module ZktClient
       # @raise [ArgumentError] if required fields are missing or invalid
       def validate_create_params!(params)
         super(params)
-        validate!(params, :app_status, in: [1, 0, 'Enable', 'Disable'])
+        validate!(params, :app_status, in: [1, 0, "Enable", "Disable"])
         validate!(params, :area, type: Array)
       end
 
@@ -33,7 +33,7 @@ module ZktClient
       def validate_update_params!(params)
         super(params)
         validate!(params, :gender, in: %w[F M])
-        validate!(params, :app_status, in: [1, 0, 'Enable', 'Disable'])
+        validate!(params, :app_status, in: [1, 0, "Enable", "Disable"])
       end
     end
   end

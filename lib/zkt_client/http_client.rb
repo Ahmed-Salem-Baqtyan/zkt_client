@@ -13,7 +13,7 @@ module ZktClient
       # @param params [Hash] the query parameters to include in the request
       # @return [Hash] the response body
       def get(url:, headers:, params: {})
-        do_request(:get, url, params: params, headers: headers)
+        do_request(:get, url, params:, headers:)
       end
 
       # Makes a POST HTTP request
@@ -23,7 +23,7 @@ module ZktClient
       # @param headers [Hash] the headers to include in the request
       # @return [Hash] the response body
       def post(url:, params:, headers: {})
-        do_request(:post, url, body: params, headers: headers)
+        do_request(:post, url, body: params, headers:)
       end
 
       # Makes a PUT HTTP request
@@ -33,7 +33,7 @@ module ZktClient
       # @param headers [Hash] the headers to include in the request
       # @return [Hash] the response body
       def put(url:, params:, headers:)
-        do_request(:put, url, body: params, headers: headers)
+        do_request(:put, url, body: params, headers:)
       end
 
       # Makes a DELETE HTTP request
@@ -42,7 +42,7 @@ module ZktClient
       # @param headers [Hash] the headers to include in the request
       # @return [Hash] the response body
       def delete(url:, headers:)
-        do_request(:delete, url, headers: headers)
+        do_request(:delete, url, headers:)
       end
 
       private

@@ -1,11 +1,10 @@
 # ZktClient
 
-[![Gem Version](https://badge.fury.io/rb/annotate.svg)](http://badge.fury.io/rb/annotate)
+[![Gem Version](https://badge.fury.io/rb/zkt_client.svg)](http://badge.fury.io/rb/zkt_client)
 ![Ruby Version](https://img.shields.io/badge/Ruby-%3E%3D%203.3.3-red)
-[![Downloads count](https://img.shields.io/gem/dt/annotate.svg?style=flat)](https://rubygems.org/gems/annotate)
-[![CI Status](https://github.com/ctran/annotate_models/workflows/CI/badge.svg)](https://github.com/ctran/annotate_models/actions?workflow=CI)
-[![Coveralls](https://coveralls.io/repos/ctran/annotate_models/badge.svg?branch=develop)](https://coveralls.io/r/ctran/annotate_models?branch=develop)
-[![Maintenability](https://codeclimate.com/github/ctran/annotate_models/badges/gpa.svg)](https://codeclimate.com/github/ctran/annotate_models)
+[![Downloads count](https://img.shields.io/gem/dt/zkt_client.svg?style=flat)](https://rubygems.org/gems/zkt_client)
+[![CI Status](https://github.com/Ahmed-Salem-Baqtyan/zkt_client/workflows/CI/badge.svg)](https://github.com/Ahmed-Salem-Baqtyan/zkt_client/actions?workflow=CI)
+[![Maintenability](https://codeclimate.com/github/Ahmed-Salem-Baqtyan/zkt_client/badges/gpa.svg)](https://codeclimate.com/github/Ahmed-Salem-Baqtyan/zkt_client)
 
 Ruby API Client for [Zkt platform](https://zkteco.eu/products/time-attendance/software/zkbio-time) it will help you to make an easy integration with [Zkt APIs](http://time.xmzkteco.com:8097/docs/api-docs/).
 

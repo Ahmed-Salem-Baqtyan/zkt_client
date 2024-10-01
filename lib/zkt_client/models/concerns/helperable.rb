@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'ostruct'
+require "ostruct"
 
 module ZktClient
   # Helperable module provides utility methods for ZktClient
@@ -38,8 +38,8 @@ module ZktClient
     def build_response(response)
       return response unless ZktClient.with_object_response?
 
-      if response['data'].is_a?(Array)
-        response['data'].map { |hash| init_object(hash) }
+      if response["data"].is_a?(Array)
+        response["data"].map { |hash| init_object(hash) }
       else
         init_object(response)
       end
@@ -58,9 +58,7 @@ module ZktClient
     # @raise [ZktClient::MissingConfigurationError] if the client is not configured
     # @return [String] the access token
     def access_token
-      unless ZktClient.configured?
-        raise(ZktClient::MissingConfigurationError, 'Configurations are missing!')
-      end
+      raise(ZktClient::MissingConfigurationError, "Configurations are missing!") unless ZktClient.configured?
 
       ZktClient.access_token || AccessToken.new.call
     end

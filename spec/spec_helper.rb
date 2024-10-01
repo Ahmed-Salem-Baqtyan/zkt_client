@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-
 require "bundler/setup"
 require "zkt_client"
-require 'vcr'
+require "vcr"
 Dir["#{__dir__}/support/**/*.rb"].sort.each(&method(:require))
-
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

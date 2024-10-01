@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ZktClient.configure do |config|
   # ZktClient configurations
   # config.host = 'http://localhost:3000'     # Required

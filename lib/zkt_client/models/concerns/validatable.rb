@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ZktClient
   # Validatable module provides validation methods for ZktClient
   module Validatable
@@ -32,9 +34,9 @@ module ZktClient
     # @raise [ArgumentError] if the attribute is required but not present
     # @return [void]
     def validate_required!(params, attribute, options)
-      if options[:required] && !params.has_key?(attribute)
-        raise(ArgumentError, "#{attribute} is required")
-      end
+      return unless options[:required] && !params.key?(attribute)
+
+      raise(ArgumentError, "#{attribute} is required")
     end
 
     # Validates that the attribute is not blank if blank is not allowed
@@ -46,9 +48,9 @@ module ZktClient
     # @raise [ArgumentError] if the attribute is blank but blank is not allowed
     # @return [void]
     def validate_blank!(params, attribute, options)
-      if !options[:blank] && (params.has_key?(attribute) && params[attribute].blank?)
-        raise(ArgumentError, "#{attribute} can't be blank")
-      end
+      return unless !options[:blank] && (params.key?(attribute) && params[attribute].blank?)
+
+      raise(ArgumentError, "#{attribute} can't be blank")
     end
 
     # Validates that the attribute is of the expected type
@@ -62,9 +64,9 @@ module ZktClient
     def validate_type!(params, attribute, options)
       klass_type = options[:type]
 
-      if klass_type.to_s.present? && !params[attribute].is_a?(klass_type)
-        raise(ArgumentError, "#{attribute} must be #{klass_type}")
-      end
+      return unless klass_type.to_s.present? && !params[attribute].is_a?(klass_type)
+
+      raise(ArgumentError, "#{attribute} must be #{klass_type}")
     end
 
     # Validates that the attribute's value is within the allowed values
@@ -76,9 +78,9 @@ module ZktClient
     # @raise [ArgumentError] if the attribute's value is not within the allowed values
     # @return [void]
     def validate_value!(params, attribute, options)
-      if params[attribute].to_s.present? && options[:in]&.exclude?(params[attribute])
-        raise(ArgumentError, "#{attribute} must be in #{options[:in]}")
-      end
+      return unless params[attribute].to_s.present? && options[:in]&.exclude?(params[attribute])
+
+      raise(ArgumentError, "#{attribute} must be in #{options[:in]}")
     end
   end
 end

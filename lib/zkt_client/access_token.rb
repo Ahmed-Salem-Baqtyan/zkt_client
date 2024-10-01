@@ -5,7 +5,7 @@
 module ZktClient
   # AccessToken class handles the retrieval and validation of access tokens
   class AccessToken
-    BASE_URL = '/api-token-auth/'.freeze
+    BASE_URL = "/api-token-auth/"
 
     # Calls the access token retrieval and validation process
     #
@@ -22,7 +22,7 @@ module ZktClient
     #
     # @raise [ZktClient::UnauthorizedError] if the access token is nil
     def validate!
-      raise(ZktClient::UnauthorizedError, 'Invalid credentials!') if access_token.nil?
+      raise(ZktClient::UnauthorizedError, "Invalid credentials!") if access_token.nil?
     end
 
     # Retrieves the access token from the server
@@ -31,7 +31,7 @@ module ZktClient
     def access_token
       return @access_token if instance_variable_defined?(:@access_token)
 
-      @access_token = HttpClient.post(url: BASE_URL, params: params)['token']
+      @access_token = HttpClient.post(url: BASE_URL, params:)["token"]
     end
 
     # Constructs the parameters for the access token request

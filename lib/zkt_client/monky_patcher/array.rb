@@ -23,6 +23,6 @@ class Array
   # @param value [Object] the value to check
   # @return [Boolean] true if the array does not include the value, false otherwise
   def exclude?(value)
-    !self.include?(value)
+    !include?(value)
   end
 end

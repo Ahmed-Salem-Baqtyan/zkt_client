@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative '../models/concerns/helperable'
-require_relative '../models/concerns/validatable'
+require_relative "../models/concerns/helperable"
+require_relative "../models/concerns/validatable"
 
 module ZktClient
   # Base class for ZktClient module

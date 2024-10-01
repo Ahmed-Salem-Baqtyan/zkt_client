@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require 'byebug'
-require 'forwardable'
+require "forwardable"
 
 Dir[
   "lib/zkt_client/*.rb",
