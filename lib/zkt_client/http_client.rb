@@ -99,7 +99,7 @@ module ZktClient
           raise(ZktClient::BadRequestError, response)
         when 422
           raise(ZktClient::UnprocessableEntityError, response)
-        when (500..599)
+        when 500..599
           raise(ZktClient::ServerError, response)
         else
           raise(ZktClient::RequestFailedError, response)

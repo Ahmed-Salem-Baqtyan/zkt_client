@@ -7,18 +7,17 @@ Gem::Specification.new do |spec|
   spec.version = ZktClient::VERSION
   spec.authors = ["Ahmed Baqtyan"]
   spec.email = ["baqtyan.as@gmail.com"]
-
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Ruby API Client for Zkt platform it will help you to make an easy integration with Zkt APIs."
+  spec.homepage = "https://github.com/Ahmed-Salem-Baqtyan/zkt_client"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.0.0"
+  spec.required_ruby_version = ">= 3.3.3"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["homepage_uri"]    = spec.homepage
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = "https://github.com/Ahmed-Salem-Baqtyan/zkt_client/blob/main/CHANGELOG.md"
+  spec.metadata['rubygems_mfa_required'] = "true"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -38,4 +37,13 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+
+  spec.add_dependency "rake", "~> 13.2", ">= 13.2.1"
+  spec.add_dependency "bundler", "~> 2.5", ">= 2.5.20"
+  spec.add_dependency "faraday", "~> 2.12"
+
+  spec.add_development_dependency "rspec", "~> 3.13"
+  spec.add_development_dependency "rubocop", "~> 1.66", ">= 1.66.1"
+  spec.add_development_dependency "byebug", "~> 11.1", ">= 11.1.3"
+  spec.add_development_dependency "vcr", "~> 6.3", ">= 6.3.1"
 end
