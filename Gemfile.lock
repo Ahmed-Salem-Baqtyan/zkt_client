@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     zkt_client (0.1.0)
-      bundler (~> 2.5, >= 2.5.20)
+      bundler (~> 2.5, >= 2.5.14)
       faraday (~> 2.12)
       rake (~> 13.2, >= 13.2.1)
 
