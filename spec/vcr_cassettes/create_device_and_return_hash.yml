@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:48:01 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:02:34 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/iclock/api/terminals/
+    body:
+      encoding: UTF-8
+      string: '{"sn":111111112,"alias":"Baqtyan Device","ip_address":"127.1.1.1"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:48:02 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '167'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |2
+
+        <html>
+        <head>
+        <title>500 Error</title>
+        </head>
+        <body>
+        <h1>"The operation you selected is not working properly or the service is not available!"</h1>
+
+        </body>
+        </html>
+  recorded_at: Tue, 01 Oct 2024 15:02:35 GMT
+recorded_with: VCR 6.3.1

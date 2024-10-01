@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:10:28 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:25:01 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/positions/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:10:30 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '1385'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6MTEsIm5leHQiOiJodHRwOi8vYmlvdGltZTguemt0ZWNvLmV1L3BlcnNvbm5lbC9hcGkvcG9zaXRpb25zLz9wYWdlPTIiLCJwcmV2aW91cyI6bnVsbCwibXNnIjoiIiwiY29kZSI6MCwiZGF0YSI6W3siaWQiOjEsInBvc2l0aW9uX2NvZGUiOiIxIiwicG9zaXRpb25fbmFtZSI6IlNlY3JldGFyaWEiLCJwYXJlbnRfcG9zaXRpb24iOm51bGwsInBhcmVudF9wb3NpdGlvbl9uYW1lIjpudWxsfSx7ImlkIjoyLCJwb3NpdGlvbl9jb2RlIjoiMiIsInBvc2l0aW9uX25hbWUiOiJFTkNBUkdBREEgREUgVU5JREFEIEFDw4FERU1JQ0EiLCJwYXJlbnRfcG9zaXRpb24iOm51bGwsInBhcmVudF9wb3NpdGlvbl9uYW1lIjpudWxsfSx7ImlkIjozLCJwb3NpdGlvbl9jb2RlIjoiMyIsInBvc2l0aW9uX25hbWUiOiJBdXhpbGlhciBhZG1pbmlzdHJhdGl2byIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9LHsiaWQiOjQsInBvc2l0aW9uX2NvZGUiOiI0IiwicG9zaXRpb25fbmFtZSI6IkxhYm9yb3RvcmlzdGEiLCJwYXJlbnRfcG9zaXRpb24iOm51bGwsInBhcmVudF9wb3NpdGlvbl9uYW1lIjpudWxsfSx7ImlkIjo1LCJwb3NpdGlvbl9jb2RlIjoiNSIsInBvc2l0aW9uX25hbWUiOiJNYW50ZW5pbWllbnRvIiwicGFyZW50X3Bvc2l0aW9uIjpudWxsLCJwYXJlbnRfcG9zaXRpb25fbmFtZSI6bnVsbH0seyJpZCI6NywicG9zaXRpb25fY29kZSI6IjM4NSIsInBvc2l0aW9uX25hbWUiOiJIUiBTZWN0aW9uIEhlYWQiLCJwYXJlbnRfcG9zaXRpb24iOm51bGwsInBhcmVudF9wb3NpdGlvbl9uYW1lIjpudWxsfSx7ImlkIjo4LCJwb3NpdGlvbl9jb2RlIjoiMjAyIiwicG9zaXRpb25fbmFtZSI6IkhSIEFkbWluIiwicGFyZW50X3Bvc2l0aW9uIjp7ImlkIjo3LCJwb3NpdGlvbl9jb2RlIjoiMzg1IiwicG9zaXRpb25fbmFtZSI6IkhSIFNlY3Rpb24gSGVhZCIsInBhcmVudF9wb3NpdGlvbiI6bnVsbH0sInBhcmVudF9wb3NpdGlvbl9uYW1lIjoiSFIgU2VjdGlvbiBIZWFkIn0seyJpZCI6OSwicG9zaXRpb25fY29kZSI6IjM4NiIsInBvc2l0aW9uX25hbWUiOiJCYXF0eWFuIERlcHQiLCJwYXJlbnRfcG9zaXRpb24iOm51bGwsInBhcmVudF9wb3NpdGlvbl9uYW1lIjpudWxsfSx7ImlkIjoxMSwicG9zaXRpb25fY29kZSI6IjEwMDAiLCJwb3NpdGlvbl9uYW1lIjoiQWhtZWQgQmFxdHlhbiBwb3NpdGlvbjEiLCJwYXJlbnRfcG9zaXRpb24iOm51bGwsInBhcmVudF9wb3NpdGlvbl9uYW1lIjpudWxsfSx7ImlkIjoxMiwicG9zaXRpb25fY29kZSI6IjEwMDEiLCJwb3NpdGlvbl9uYW1lIjoiQnVzaW5lc3MgQW5hbHlzdCIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9XX0=
+  recorded_at: Tue, 01 Oct 2024 15:25:02 GMT
+recorded_with: VCR 6.3.1

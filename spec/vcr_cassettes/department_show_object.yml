@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:42:12 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:56:45 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/departments/1/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:42:13 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '75'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"dept_code":"1","dept_name":"Ahmed S O Baqtyan","parent_dept":null}'
+  recorded_at: Tue, 01 Oct 2024 14:56:45 GMT
+recorded_with: VCR 6.3.1

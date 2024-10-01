@@ -1,0 +1,229 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:05:25 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:19:58 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/employees/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:05:26 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '7161'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"count":8,"next":null,"previous":null,"msg":"","code":0,"data":[{"id":68,"emp_code":"10001","first_name":"Salim
+        Baqtyan","last_name":null,"nickname":null,"format_name":"10001 Salim Baqtyan","photo":"","full_name":"Salim
+        Baqtyan ","device_password":null,"card_no":null,"department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-10-01","gender":null,"birthday":null,"verify_mode":-1,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"","ssn":null,"religion":null,"attemployee":{"id":68,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":1,"area_code":"11","area_name":"Salem
+        A O Baqtyan"}],"app_status":0,"app_role":1,"update_time":"2024-10-01 17:03:57","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":null},{"id":62,"emp_code":"223","first_name":null,"last_name":null,"nickname":"","format_name":"223
+        ","photo":"","full_name":" ","device_password":null,"card_no":null,"department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":1,"emp_type":null,"contact_tel":"","office_tel":null,"mobile":"","national":"","city":"","address":"","postcode":"","email":"","enroll_sn":"","ssn":null,"religion":"","attemployee":{"id":62,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-10-01
+        12:19:09","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":null},{"id":63,"emp_code":"224","first_name":"","last_name":null,"nickname":null,"format_name":"224
+        ","photo":"","full_name":" ","device_password":null,"card_no":null,"department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":0,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"CNRC233760125","ssn":null,"religion":null,"attemployee":{"id":63,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-09-30
+        12:08:24","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":null},{"id":64,"emp_code":"225","first_name":"","last_name":null,"nickname":null,"format_name":"225
+        ","photo":"","full_name":" ","device_password":null,"card_no":null,"department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":0,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"CNRC233760125","ssn":null,"religion":null,"attemployee":{"id":64,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-09-30
+        12:08:24","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":null},{"id":66,"emp_code":"226","first_name":"","last_name":null,"nickname":null,"format_name":"226
+        ","photo":"","full_name":" ","device_password":null,"card_no":null,"department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":0,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"CNRC233760125","ssn":null,"religion":null,"attemployee":{"id":66,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-09-30
+        12:08:25","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":null},{"id":61,"emp_code":"2588","first_name":"","last_name":null,"nickname":null,"format_name":"2588
+        ","photo":"","full_name":" ","device_password":null,"card_no":"3971738","department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":0,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"CNRC233760125","ssn":null,"religion":null,"attemployee":{"id":61,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-09-30
+        12:08:22","fingerprint":"-","face":"-","palm":"Ver 12:1","vl_face":"Ver 58:1","vl_palm":"-","vl_face_photo":1,"Employee
+        Status":null},{"id":67,"emp_code":"26","first_name":"yyydt","last_name":null,"nickname":null,"format_name":"26
+        yyydt","photo":"","full_name":"yyydt ","device_password":null,"card_no":"8128831","department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":0,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"CJRZ202160085","ssn":null,"religion":null,"attemployee":{"id":67,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-09-30
+        12:18:54","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":null},{"id":65,"emp_code":"61616","first_name":"","last_name":null,"nickname":null,"format_name":"61616
+        ","photo":"","full_name":" ","device_password":"1234","card_no":null,"department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":0,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"CNRC233760125","ssn":null,"religion":null,"attemployee":{"id":65,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-09-30
+        12:08:25","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":null}]}'
+  recorded_at: Tue, 01 Oct 2024 15:19:58 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:05:26 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:19:59 GMT
+- request:
+    method: put
+    uri: http://biotime8.zkteco.eu/personnel/api/employees/68/
+    body:
+      encoding: UTF-8
+      string: '{"area":[1],"first_name":"Salim A Baqtyan"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:05:27 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '608'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"emp_code":"10001","first_name":"Salim A Baqtyan","last_name":null,"nickname":null,"device_password":null,"card_no":null,"department":1,"position":null,"hire_date":"2024-10-01","gender":null,"birthday":null,"verify_mode":-1,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"","ssn":null,"religion":null,"dev_privilege":0,"self_password":"pbkdf2_sha256$390000$D4x1ilGfqcL1TfcPNlFnL2$y1ADffLsXKEtXSrqf4EvRPGGjqbfSFFblhLlzS9DVmw=","flow_role":[],"area":[1],"app_status":0,"app_role":1,"Employee
+        Status":null}'
+  recorded_at: Tue, 01 Oct 2024 15:20:00 GMT
+recorded_with: VCR 6.3.1

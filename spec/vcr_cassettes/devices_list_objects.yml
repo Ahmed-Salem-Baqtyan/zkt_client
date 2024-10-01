@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:56:04 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:10:37 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/iclock/api/terminals/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:56:05 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '525'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"count":1,"next":null,"previous":null,"msg":"","code":0,"data":[{"id":42,"sn":"111111111111","ip_address":"127.1.1.1","alias":"Baqtyan
+        device","terminal_name":null,"fw_ver":null,"push_ver":null,"state":"3","terminal_tz":0,"area":{"id":1,"area_code":"11","area_name":"Salem
+        A O Baqtyan"},"last_activity":null,"user_count":null,"fp_count":null,"face_count":null,"palm_count":null,"transaction_count":null,"push_time":null,"transfer_time":"00:00;14:05","transfer_interval":1,"is_attendance":1,"area_name":"Salem
+        A O Baqtyan"}]}'
+  recorded_at: Tue, 01 Oct 2024 15:10:37 GMT
+recorded_with: VCR 6.3.1

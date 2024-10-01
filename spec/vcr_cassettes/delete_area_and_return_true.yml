@@ -1,0 +1,308 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:58:43 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:13:15 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/areas/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:58:44 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '1167'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6MjAsIm5leHQiOiJodHRwOi8vYmlvdGltZTguemt0ZWNvLmV1L3BlcnNvbm5lbC9hcGkvYXJlYXMvP3BhZ2U9MiIsInByZXZpb3VzIjpudWxsLCJtc2ciOiIiLCJjb2RlIjowLCJkYXRhIjpbeyJpZCI6MSwiYXJlYV9jb2RlIjoiMTEiLCJhcmVhX25hbWUiOiJTYWxlbSBBIE8gQmFxdHlhbiIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfSx7ImlkIjo0LCJhcmVhX2NvZGUiOiI0IiwiYXJlYV9uYW1lIjoiU2FsaW0gQmFxdHlhbiIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfSx7ImlkIjo1LCJhcmVhX2NvZGUiOiI1IiwiYXJlYV9uYW1lIjoid2Foam1hcnQiLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH0seyJpZCI6NiwiYXJlYV9jb2RlIjoiNiIsImFyZWFfbmFtZSI6Im5ldyIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfSx7ImlkIjo3LCJhcmVhX2NvZGUiOiIxMiIsImFyZWFfbmFtZSI6ImVhbGkiLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH0seyJpZCI6OCwiYXJlYV9jb2RlIjoiMTMiLCJhcmVhX25hbWUiOiJURVNUX3JvIiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9LHsiaWQiOjksImFyZWFfY29kZSI6IjE0IiwiYXJlYV9uYW1lIjoi2KfZhNiv2KfYsdipIiwicGFyZW50X2FyZWEiOnsiaWQiOjYsImFyZWFfY29kZSI6IjYiLCJhcmVhX25hbWUiOiJuZXciLCJwYXJlbnRfYXJlYSI6bnVsbH0sInBhcmVudF9hcmVhX25hbWUiOiJuZXcifSx7ImlkIjoxMCwiYXJlYV9jb2RlIjoiMTUwIiwiYXJlYV9uYW1lIjoiaG9sYSIsInBhcmVudF9hcmVhIjp7ImlkIjo1LCJhcmVhX2NvZGUiOiI1IiwiYXJlYV9uYW1lIjoid2Foam1hcnQiLCJwYXJlbnRfYXJlYSI6bnVsbH0sInBhcmVudF9hcmVhX25hbWUiOiJ3YWhqbWFydCJ9LHsiaWQiOjExLCJhcmVhX2NvZGUiOiIwMDEiLCJhcmVhX25hbWUiOiJIUiBUZWFtIiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9LHsiaWQiOjEyLCJhcmVhX2NvZGUiOiIxNTEiLCJhcmVhX25hbWUiOiJlbXB0eSIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfV19
+  recorded_at: Tue, 01 Oct 2024 14:13:16 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:58:44 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:13:17 GMT
+- request:
+    method: delete
+    uri: http://biotime8.zkteco.eu/personnel/api/areas/1/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:58:45 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '167'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |2
+
+        <html>
+        <head>
+        <title>500 Error</title>
+        </head>
+        <body>
+        <h1>"The operation you selected is not working properly or the service is not available!"</h1>
+
+        </body>
+        </html>
+  recorded_at: Tue, 01 Oct 2024 14:13:17 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:58:45 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:13:18 GMT
+- request:
+    method: delete
+    uri: http://biotime8.zkteco.eu/personnel/api/areas/1/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:58:46 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '167'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |2
+
+        <html>
+        <head>
+        <title>500 Error</title>
+        </head>
+        <body>
+        <h1>"The operation you selected is not working properly or the service is not available!"</h1>
+
+        </body>
+        </html>
+  recorded_at: Tue, 01 Oct 2024 14:13:18 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:59:56 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:14:29 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/employees/62/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:59:57 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '856'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":62,"emp_code":"223","first_name":null,"last_name":null,"nickname":"","format_name":"223
+        ","photo":"","full_name":" ","device_password":null,"card_no":null,"department":{"id":1,"dept_code":"1","dept_name":"Salem
+        A O Baqtyan"},"position":null,"hire_date":"2024-09-30","gender":null,"birthday":null,"verify_mode":1,"emp_type":null,"contact_tel":"","office_tel":null,"mobile":"","national":"","city":"","address":"","postcode":"","email":"","enroll_sn":"","ssn":null,"religion":"","attemployee":{"id":62,"enable_attendance":true,"enable_overtime":true,"enable_holiday":true,"enable_schedule":true},"dev_privilege":0,"area":[{"id":18,"area_code":"154","area_name":"Testt"}],"app_status":0,"app_role":1,"update_time":"2024-10-01
+        12:19:09","fingerprint":"-","face":"-","palm":"-","vl_face":"-","vl_palm":"-","vl_face_photo":"-","Employee
+        Status":"Inactive"}'
+  recorded_at: Tue, 01 Oct 2024 15:14:30 GMT
+recorded_with: VCR 6.3.1

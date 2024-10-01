@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:07:23 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:21:57 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/personnel/api/employees/
+    body:
+      encoding: UTF-8
+      string: '{"emp_code":10002,"first_name":"Ahmed S O Baqtyan","department":1,"area":[1]}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:07:25 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '618'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":69,"emp_code":"10002","first_name":"Ahmed S O Baqtyan","last_name":null,"nickname":null,"device_password":null,"card_no":null,"department":1,"position":null,"hire_date":"2024-10-01","gender":null,"birthday":null,"verify_mode":-1,"emp_type":null,"contact_tel":null,"office_tel":null,"mobile":null,"national":null,"city":null,"address":null,"postcode":null,"email":null,"enroll_sn":"","ssn":null,"religion":null,"dev_privilege":0,"self_password":"pbkdf2_sha256$390000$hZLOKnm47ZxbhaVk1j67xu$Oxxx46Bwz1TmrFoDhRatjHMMMWIPf5l/rlIWVdyUQlE=","flow_role":[],"area":[1],"app_status":0,"app_role":1,"Employee
+        Status":null}'
+  recorded_at: Tue, 01 Oct 2024 15:21:58 GMT
+recorded_with: VCR 6.3.1

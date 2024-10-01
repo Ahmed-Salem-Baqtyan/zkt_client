@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:32:37 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 13:47:10 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/areas/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:32:38 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '1157'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6MTgsIm5leHQiOiJodHRwOi8vYmlvdGltZTguemt0ZWNvLmV1L3BlcnNvbm5lbC9hcGkvYXJlYXMvP3BhZ2U9MiIsInByZXZpb3VzIjpudWxsLCJtc2ciOiIiLCJjb2RlIjowLCJkYXRhIjpbeyJpZCI6MSwiYXJlYV9jb2RlIjoiMTEiLCJhcmVhX25hbWUiOiJCYXF0eWFuIiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9LHsiaWQiOjQsImFyZWFfY29kZSI6IjQiLCJhcmVhX25hbWUiOiJTYWxpbSBCYXF0eWFuIiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9LHsiaWQiOjUsImFyZWFfY29kZSI6IjUiLCJhcmVhX25hbWUiOiJ3YWhqbWFydCIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfSx7ImlkIjo2LCJhcmVhX2NvZGUiOiI2IiwiYXJlYV9uYW1lIjoibmV3IiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9LHsiaWQiOjcsImFyZWFfY29kZSI6IjEyIiwiYXJlYV9uYW1lIjoiZWFsaSIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfSx7ImlkIjo4LCJhcmVhX2NvZGUiOiIxMyIsImFyZWFfbmFtZSI6IlRFU1Rfcm8iLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH0seyJpZCI6OSwiYXJlYV9jb2RlIjoiMTQiLCJhcmVhX25hbWUiOiLYp9mE2K/Yp9ix2KkiLCJwYXJlbnRfYXJlYSI6eyJpZCI6NiwiYXJlYV9jb2RlIjoiNiIsImFyZWFfbmFtZSI6Im5ldyIsInBhcmVudF9hcmVhIjpudWxsfSwicGFyZW50X2FyZWFfbmFtZSI6Im5ldyJ9LHsiaWQiOjEwLCJhcmVhX2NvZGUiOiIxNTAiLCJhcmVhX25hbWUiOiJob2xhIiwicGFyZW50X2FyZWEiOnsiaWQiOjUsImFyZWFfY29kZSI6IjUiLCJhcmVhX25hbWUiOiJ3YWhqbWFydCIsInBhcmVudF9hcmVhIjpudWxsfSwicGFyZW50X2FyZWFfbmFtZSI6IndhaGptYXJ0In0seyJpZCI6MTEsImFyZWFfY29kZSI6IjAwMSIsImFyZWFfbmFtZSI6IkhSIFRlYW0iLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH0seyJpZCI6MTIsImFyZWFfY29kZSI6IjE1MSIsImFyZWFfbmFtZSI6ImVtcHR5IiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9XX0=
+  recorded_at: Tue, 01 Oct 2024 13:47:10 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,196 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:12:40 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:27:13 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/positions/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:12:42 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '1396'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6MTIsIm5leHQiOiJodHRwOi8vYmlvdGltZTguemt0ZWNvLmV1L3BlcnNvbm5lbC9hcGkvcG9zaXRpb25zLz9wYWdlPTIiLCJwcmV2aW91cyI6bnVsbCwibXNnIjoiIiwiY29kZSI6MCwiZGF0YSI6W3siaWQiOjEsInBvc2l0aW9uX2NvZGUiOiIxMTExMSIsInBvc2l0aW9uX25hbWUiOiJBaG1lZCBTIE8gQmFxdHlhbiIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9LHsiaWQiOjIsInBvc2l0aW9uX2NvZGUiOiIyIiwicG9zaXRpb25fbmFtZSI6IkVOQ0FSR0FEQSBERSBVTklEQUQgQUPDgURFTUlDQSIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9LHsiaWQiOjMsInBvc2l0aW9uX2NvZGUiOiIzIiwicG9zaXRpb25fbmFtZSI6IkF1eGlsaWFyIGFkbWluaXN0cmF0aXZvIiwicGFyZW50X3Bvc2l0aW9uIjpudWxsLCJwYXJlbnRfcG9zaXRpb25fbmFtZSI6bnVsbH0seyJpZCI6NCwicG9zaXRpb25fY29kZSI6IjQiLCJwb3NpdGlvbl9uYW1lIjoiTGFib3JvdG9yaXN0YSIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9LHsiaWQiOjUsInBvc2l0aW9uX2NvZGUiOiI1IiwicG9zaXRpb25fbmFtZSI6Ik1hbnRlbmltaWVudG8iLCJwYXJlbnRfcG9zaXRpb24iOm51bGwsInBhcmVudF9wb3NpdGlvbl9uYW1lIjpudWxsfSx7ImlkIjo3LCJwb3NpdGlvbl9jb2RlIjoiMzg1IiwicG9zaXRpb25fbmFtZSI6IkhSIFNlY3Rpb24gSGVhZCIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9LHsiaWQiOjgsInBvc2l0aW9uX2NvZGUiOiIyMDIiLCJwb3NpdGlvbl9uYW1lIjoiSFIgQWRtaW4iLCJwYXJlbnRfcG9zaXRpb24iOnsiaWQiOjcsInBvc2l0aW9uX2NvZGUiOiIzODUiLCJwb3NpdGlvbl9uYW1lIjoiSFIgU2VjdGlvbiBIZWFkIiwicGFyZW50X3Bvc2l0aW9uIjpudWxsfSwicGFyZW50X3Bvc2l0aW9uX25hbWUiOiJIUiBTZWN0aW9uIEhlYWQifSx7ImlkIjo5LCJwb3NpdGlvbl9jb2RlIjoiMzg2IiwicG9zaXRpb25fbmFtZSI6IkJhcXR5YW4gRGVwdCIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9LHsiaWQiOjExLCJwb3NpdGlvbl9jb2RlIjoiMTAwMCIsInBvc2l0aW9uX25hbWUiOiJBaG1lZCBCYXF0eWFuIHBvc2l0aW9uMSIsInBhcmVudF9wb3NpdGlvbiI6bnVsbCwicGFyZW50X3Bvc2l0aW9uX25hbWUiOm51bGx9LHsiaWQiOjEyLCJwb3NpdGlvbl9jb2RlIjoiMTAwMSIsInBvc2l0aW9uX25hbWUiOiJCdXNpbmVzcyBBbmFseXN0IiwicGFyZW50X3Bvc2l0aW9uIjpudWxsLCJwYXJlbnRfcG9zaXRpb25fbmFtZSI6bnVsbH1dfQ==
+  recorded_at: Tue, 01 Oct 2024 15:27:14 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:12:42 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 15:27:15 GMT
+- request:
+    method: put
+    uri: http://biotime8.zkteco.eu/personnel/api/positions/1/
+    body:
+      encoding: UTF-8
+      string: '{"position_code":1112121,"position_name":"Salem A O Baqtyan"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 15:12:43 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '86'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"position_code":"1112121","position_name":"Salem A O Baqtyan","parent_position":null}'
+  recorded_at: Tue, 01 Oct 2024 15:27:15 GMT
+recorded_with: VCR 6.3.1

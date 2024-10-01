@@ -1,0 +1,196 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:54:29 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:09:01 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/areas/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:54:29 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '1165'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6MjAsIm5leHQiOiJodHRwOi8vYmlvdGltZTguemt0ZWNvLmV1L3BlcnNvbm5lbC9hcGkvYXJlYXMvP3BhZ2U9MiIsInByZXZpb3VzIjpudWxsLCJtc2ciOiIiLCJjb2RlIjowLCJkYXRhIjpbeyJpZCI6MSwiYXJlYV9jb2RlIjoiMTEiLCJhcmVhX25hbWUiOiJBaG1lZCBTIEJhcXR5YW4iLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH0seyJpZCI6NCwiYXJlYV9jb2RlIjoiNCIsImFyZWFfbmFtZSI6IlNhbGltIEJhcXR5YW4iLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH0seyJpZCI6NSwiYXJlYV9jb2RlIjoiNSIsImFyZWFfbmFtZSI6IndhaGptYXJ0IiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9LHsiaWQiOjYsImFyZWFfY29kZSI6IjYiLCJhcmVhX25hbWUiOiJuZXciLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH0seyJpZCI6NywiYXJlYV9jb2RlIjoiMTIiLCJhcmVhX25hbWUiOiJlYWxpIiwicGFyZW50X2FyZWEiOm51bGwsInBhcmVudF9hcmVhX25hbWUiOm51bGx9LHsiaWQiOjgsImFyZWFfY29kZSI6IjEzIiwiYXJlYV9uYW1lIjoiVEVTVF9ybyIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfSx7ImlkIjo5LCJhcmVhX2NvZGUiOiIxNCIsImFyZWFfbmFtZSI6Itin2YTYr9in2LHYqSIsInBhcmVudF9hcmVhIjp7ImlkIjo2LCJhcmVhX2NvZGUiOiI2IiwiYXJlYV9uYW1lIjoibmV3IiwicGFyZW50X2FyZWEiOm51bGx9LCJwYXJlbnRfYXJlYV9uYW1lIjoibmV3In0seyJpZCI6MTAsImFyZWFfY29kZSI6IjE1MCIsImFyZWFfbmFtZSI6ImhvbGEiLCJwYXJlbnRfYXJlYSI6eyJpZCI6NSwiYXJlYV9jb2RlIjoiNSIsImFyZWFfbmFtZSI6IndhaGptYXJ0IiwicGFyZW50X2FyZWEiOm51bGx9LCJwYXJlbnRfYXJlYV9uYW1lIjoid2Foam1hcnQifSx7ImlkIjoxMSwiYXJlYV9jb2RlIjoiMDAxIiwiYXJlYV9uYW1lIjoiSFIgVGVhbSIsInBhcmVudF9hcmVhIjpudWxsLCJwYXJlbnRfYXJlYV9uYW1lIjpudWxsfSx7ImlkIjoxMiwiYXJlYV9jb2RlIjoiMTUxIiwiYXJlYV9uYW1lIjoiZW1wdHkiLCJwYXJlbnRfYXJlYSI6bnVsbCwicGFyZW50X2FyZWFfbmFtZSI6bnVsbH1dfQ==
+  recorded_at: Tue, 01 Oct 2024 14:09:02 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:54:30 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:09:03 GMT
+- request:
+    method: put
+    uri: http://biotime8.zkteco.eu/personnel/api/areas/1/
+    body:
+      encoding: UTF-8
+      string: '{"area_name":"Ahmed S O Baqtyan"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 13:54:31 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '76'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"area_code":"11","area_name":"Ahmed S O Baqtyan","parent_area":null}'
+  recorded_at: Tue, 01 Oct 2024 14:09:03 GMT
+recorded_with: VCR 6.3.1

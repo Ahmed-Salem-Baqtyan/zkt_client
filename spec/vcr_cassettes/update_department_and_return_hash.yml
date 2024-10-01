@@ -1,0 +1,198 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:41:43 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:56:16 GMT
+- request:
+    method: get
+    uri: http://biotime8.zkteco.eu/personnel/api/departments/
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:41:44 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, POST, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '926'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"count":13,"next":"http://biotime8.zkteco.eu/personnel/api/departments/?page=2","previous":null,"msg":"","code":0,"data":[{"id":1,"dept_code":"1","dept_name":"Secretaria","parent_dept":null},{"id":6,"dept_code":"2","dept_name":"TEST_ro","parent_dept":null},{"id":7,"dept_code":"3","dept_name":"it","parent_dept":null},{"id":10,"dept_code":"385","dept_name":"HR
+        Team","parent_dept":null},{"id":11,"dept_code":"386","dept_name":"irtshad","parent_dept":{"id":6,"dept_code":"2","dept_name":"TEST_ro","parent_dept":null}},{"id":12,"dept_code":"387","dept_name":"teste","parent_dept":null},{"id":13,"dept_code":"5","dept_name":"Test","parent_dept":null},{"id":14,"dept_code":"388","dept_name":"Baqtyan
+        Dept","parent_dept":null},{"id":15,"dept_code":"1000","dept_name":"Baqtyan
+        10001","parent_dept":null},{"id":16,"dept_code":"1001","dept_name":"IT","parent_dept":{"id":6,"dept_code":"2","dept_name":"TEST_ro","parent_dept":null}}]}'
+  recorded_at: Tue, 01 Oct 2024 14:56:17 GMT
+- request:
+    method: post
+    uri: http://biotime8.zkteco.eu/api-token-auth/
+    body:
+      encoding: UTF-8
+      string: password=Admin123&username=admin
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:41:45 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      allow:
+      - POST, OPTIONS
+      vary:
+      - Accept-Language,Cookie
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '52'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"token":"e902da6a63aa944550f6841dec5c76ddd4a92bfc"}'
+  recorded_at: Tue, 01 Oct 2024 14:56:18 GMT
+- request:
+    method: put
+    uri: http://biotime8.zkteco.eu/personnel/api/departments/1/
+    body:
+      encoding: UTF-8
+      string: '{"dept_name":"Ahmed S O Baqtyan"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token e902da6a63aa944550f6841dec5c76ddd4a92bfc
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 01 Oct 2024 14:41:46 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff, nosniff
+      vary:
+      - Accept,Accept-Language,Cookie
+      allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      pragma:
+      - no-cache
+      cache-control:
+      - no-store
+      content-language:
+      - en
+      content-length:
+      - '75'
+      referrer-policy:
+      - same-origin
+      cross-origin-opener-policy:
+      - None
+      content-type:
+      - application/json
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"dept_code":"1","dept_name":"Ahmed S O Baqtyan","parent_dept":null}'
+  recorded_at: Tue, 01 Oct 2024 14:56:18 GMT
+recorded_with: VCR 6.3.1
