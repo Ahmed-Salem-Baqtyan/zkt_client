@@ -2,14 +2,24 @@
 
 require "forwardable"
 
-Dir[
-  "lib/zkt_client/*.rb",
-  "lib/zkt_client/models/*.rb",
-  "lib/zkt_client/monky_patcher/*.rb",
-  "lib/zkt_client/params_validator/*.rb"
-].each do |file|
-  require_relative file.delete_prefix("lib/")
-end
+require_relative "zkt_client/version"
+require_relative "zkt_client/exceptions"
+require_relative "zkt_client/http_client"
+require_relative "zkt_client/models/area"
+require_relative "zkt_client/access_token"
+require_relative "zkt_client/configuration"
+require_relative "zkt_client/models/device"
+require_relative "zkt_client/models/employee"
+require_relative "zkt_client/models/position"
+require_relative "zkt_client/models/department"
+require_relative "zkt_client/monky_patcher/nil"
+require_relative "zkt_client/monky_patcher/hash"
+require_relative "zkt_client/models/transaction"
+require_relative "zkt_client/monky_patcher/true"
+require_relative "zkt_client/monky_patcher/false"
+require_relative "zkt_client/monky_patcher/array"
+require_relative "zkt_client/monky_patcher/string"
+require_relative "zkt_client/monky_patcher/integer"
 
 # Main module for ZktClient
 module ZktClient

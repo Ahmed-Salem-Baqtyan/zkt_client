@@ -90,20 +90,16 @@ module ZktClient
       # @raise [ZktClient::ServerError] if the response status is 500-599
       # @raise [ZktClient::RequestFailedError] for other response statuses
       def validate_status!(request)
-        response = request.body
+        exception_klass = case request.status
+                          when 404 then ZktClient::RecordNotFound
+                          when 400 then ZktClient::BadRequestError
+                          when 422 then ZktClient::UnprocessableEntityError
+                          when 500..599 then ZktClient::ServerError
+                          else
+                            ZktClient::RequestFailedError
+                          end
 
-        case request.status
-        when 404
-          raise(ZktClient::RecordNotFound, response)
-        when 400
-          raise(ZktClient::BadRequestError, response)
-        when 422
-          raise(ZktClient::UnprocessableEntityError, response)
-        when 500..599
-          raise(ZktClient::ServerError, response)
-        else
-          raise(ZktClient::RequestFailedError, response)
-        end
+        raise(exception_klass, request.body)
       end
     end
   end

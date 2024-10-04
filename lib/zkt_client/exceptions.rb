@@ -3,7 +3,6 @@
 module ZktClient
   class Error < StandardError; end
   class MissingConfigurationError < Error; end
-  class UnauthorizedError < Error; end
   class RecordNotFound < Error; end
   class BadRequestError < Error; end
   class UnprocessableEntityError < Error; end

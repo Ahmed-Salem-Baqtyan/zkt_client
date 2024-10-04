@@ -373,13 +373,13 @@ ZktClient::Device.list(page: 1)
 ```ruby
 # ZktClient::Device.create(params)
 
-ZktClient::Device.create(area_code: 100, area_name: 'Ahmed Baqtyan')
+ZktClient::Device.create(sn: '11111111122', alias: 'Baqtyan device', ip_address: '192.168.1.201', area: 12)
 
 # JSON response
-{ "id"=>15, "area_code"=>"100", "area_name"=>"Ahmed Baqtyan", "parent_area"=>nil }
+{ "id"=>12, "sn"=>"11111111122", "ip_address"=>"192.168.1.201", "alias"=>"Baqtyan device", "area"=>12, "heartbeat"=>nil }
 
 # Object response
-<OpenStruct id=15, area_code="100", area_name="Ahmed Baqtyan", parent_area=nil, parent_area_name=nil>
+<OpenStruct id=15, sn="11111111122", ip_address="192.168.1.201", alias="Baqtyan device", area=12, heartbeat=nil>
 ```
 
 #### Update Device
@@ -829,7 +829,6 @@ Exceptions
 Class                                    | Description                                                       |  Message
 ---------------------------------------- | :---------------------------------------------------------------: | ------------------------------------
 `ZktClient::MissingConfigurationError`   | If you do a request without configure ZktCleint configurations.   | Configurations are missing!
-`ZktClient::UnauthorizedError`           | When Invalid login.                                               | Invalid credentials!
 `ZktClient::RecordNotFound`              | When the request status id 404                                    | Picked from the response itself
 `ZktClient::BadRequestError`             | When the request status is 404                                    | Picked from the response itself
 `ZktClient::UnprocessableEntityError`    | When the request status is 422                                    | Picked from the response itself
